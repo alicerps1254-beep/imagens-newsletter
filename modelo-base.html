@@ -1,0 +1,516 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="x-apple-disable-message-reformatting" />
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+<meta name="color-scheme" content="light only" />
+<meta name="supported-color-schemes" content="light only" />
+<title>DETRAN.RJ Notícias &#8211; Edição [[Nº]]</title>
+<!--[if mso]>
+<noscript><xml>
+  <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+  </o:OfficeDocumentSettings>
+</xml></noscript>
+<![endif]-->
+
+<!--
+  ============================================================================
+  MODELO BASE · DETRAN.RJ NOTÍCIAS
+  ============================================================================
+
+  COMO MONTAR UMA EDIÇÃO NOVA
+
+  1. Faça uma CÓPIA deste arquivo e renomeie (ex.: edicao-02.html).
+     Não edite o modelo-base.html: ele é a matriz de todas as edições.
+
+  2. Procure por  [[  (Ctrl+F). Cada [[...]] é um campo a preencher; o texto
+     entre os colchetes diz o que vai ali. Apague os colchetes junto.
+
+  3. O modelo vem com dois tipos de matéria:
+        MATÉRIA 1 (completa) .. com a faixa de números em destaque
+        MATÉRIA 2 (simples) ... sem faixa de números, com dois parágrafos
+
+     Para ter MAIS matérias:
+        a) copie tudo entre  "INÍCIO MATÉRIA"  e  "FIM MATÉRIA"  (inclusive);
+        b) cole logo antes de  "INÍCIO DETRAN INDICA";
+        c) troque a âncora  name="materia-2" id="materia-2"  pelo próximo
+           número (materia-3, materia-4...);
+        d) no SUMÁRIO, copie uma linha (de "INÍCIO ITEM" a "FIM ITEM"),
+           ajuste o número (03, 04...) e o href (#materia-3, #materia-4...).
+           O primeiro item do sumário não tem linha divisória em cima;
+           os demais têm (border-top). Ao copiar, use um item do meio.
+
+     Para ter MENOS matérias: apague o bloco da matéria e o item dela
+     no sumário, e renumere os itens que sobrarem.
+
+  4. Blocos marcados [OPCIONAL] podem ser apagados inteiros, do comentário
+     de INÍCIO até o de FIM. Ex.: a faixa de números, a seção Detran indica.
+     Faixa de números com UM número só: apague a segunda célula (de
+     "INÍCIO NÚMERO 2" a "FIM NÚMERO 2") e troque width="50%" e
+     width:50% da primeira por 100%.
+
+  TAMANHOS QUE CABEM BEM NO LAYOUT
+     Título da matéria ........ até 10 palavras
+     Linha fina ............... 1 a 2 frases
+     Corpo .................... 3 a 6 frases (1 ou 2 parágrafos)
+     Caixas "O que muda" ...... 2 a 4 frases cada
+     Número em destaque ....... até 5 caracteres (90 · 0,05 · 30)
+     Unidade do número ........ 1 a 2 palavras (dias · mg/L · de setembro)
+     Legenda do número ........ até 6 palavras
+     Matérias por edição ...... 3 a 5
+
+  ANTES DE ENVIAR
+     [ ] Ctrl+F por  [[  não encontra mais nada
+     [ ] <title> e pré-cabeçalho atualizados (logo abaixo do <body>)
+     [ ] Sumário em sequência (01, 02, 03...) e cada item leva à matéria certa
+     [ ] Todos os links "Saiba mais" abrem a norma certa (começam com https://)
+     [ ] E-mail de teste enviado para você e aberto no celular e no Outlook
+
+  IMAGENS DO CABEÇALHO
+     Apontam para logogovrj.png e detrannoticias.png, na branch main do
+     repositório imagens-newsletter. Se mudar os arquivos de lugar ou de
+     nome, atualize as duas URLs.
+
+  ----------------------------------------------------------------------------
+  SISTEMA VISUAL (não mude sem motivo: é o que mantém as edições iguais)
+  ----------------------------------------------------------------------------
+  Cores (tiradas dos próprios logos):
+     #035C98  azul DETRAN ......... títulos de matéria, números, links
+     #27AC00  verde Notícias ...... faixas e bordas (só elemento gráfico)
+     #29812E  verde escuro ........ etiquetas "DETRAN INFORMA / INDICA"
+     #246F28  verde texto ......... rótulo da caixa do usuário
+     #1F2A33  texto principal
+     #55616B  texto de apoio (linha fina, legendas, rodapé)
+     #EEF7EA  fundo da caixa "O que muda para o usuário?"  (borda #27AC00)
+     #EAF3FA  fundo da caixa "O que muda para o servidor?" (borda #035C98)
+     #F4F7FA  fundo neutro (sumário e "Detran indica")
+     #D4E9F7  faixa de créditos (Colaboração)
+  Tipos (Arial): etiqueta 12 · apoio 14 · caixa 15 · corpo 16 · título 24 · número 36
+  Espaçamento: múltiplos de 8 (8, 16, 24, 32, 48, 56)
+  ============================================================================
+-->
+
+<style type="text/css">
+  :root { color-scheme: light only; supported-color-schemes: light only; }
+  body { margin:0 !important; padding:0 !important; width:100% !important; }
+  table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+  img { border:0; outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; }
+  p { margin:0; padding:0; }
+  a { color:#035C98; }
+  /* impede que o iOS transforme datas/números em links azuis */
+  a[x-apple-data-detectors] { color:inherit !important; text-decoration:none !important; font-size:inherit !important; font-family:inherit !important; font-weight:inherit !important; line-height:inherit !important; }
+  #MessageViewBody a { color:inherit; text-decoration:none; }
+  .toc a:hover { color:#035C98 !important; text-decoration:underline !important; }
+
+  @media only screen and (max-width:620px) {
+    .ecw     { width:100% !important; min-width:0 !important; max-width:100% !important; }
+    .pad     { padding-left:20px !important; padding-right:20px !important; }
+    .boxpad  { padding:20px !important; }
+    .h1      { font-size:21px !important; line-height:1.25 !important; }
+    .num     { font-size:30px !important; }
+    .fluid   { width:100% !important; max-width:100% !important; height:auto !important; }
+    .stack   { display:block !important; width:100% !important; box-sizing:border-box !important; padding-left:0 !important; padding-right:0 !important; }
+    .stackgap{ padding-top:20px !important; }
+    .outer   { padding:0 !important; }
+  }
+</style>
+</head>
+
+<body style="margin:0; padding:0; background-color:#EEF2F5; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;">
+
+<!-- pré-cabeçalho: aparece na lista de mensagens, ao lado do assunto, não no corpo -->
+<div style="display:none; font-size:1px; color:#EEF2F5; line-height:1px; max-height:0; max-width:0; opacity:0; overflow:hidden;">
+  [[Resumo de uma linha para a caixa de entrada, ex.: os temas das matérias]] &#8211; Edição [[Nº]].
+  &#8203;&#847;&#8203;&#847;&#8203;&#847;&#8203;&#847;&#8203;&#847;&#8203;&#847;&#8203;&#847;&#8203;&#847;&#8203;&#847;&#8203;&#847;
+</div>
+
+<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#EEF2F5" style="background-color:#EEF2F5;">
+<tr>
+<td class="outer" align="center" style="padding:24px 0;">
+
+<!--[if mso]><table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="600"><tr><td><![endif]-->
+<table role="presentation" class="ecw" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="width:100%; max-width:600px; background-color:#ffffff; font-family:Arial, Helvetica, sans-serif;">
+
+  <!-- ================= FAIXA SUPERIOR AZUL/VERDE (fixa) ================= -->
+  <tr>
+    <td style="padding:0;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="50%" height="8" bgcolor="#035C98" style="background-color:#035C98; height:8px; font-size:0; line-height:0;">&nbsp;</td>
+          <td width="50%" height="8" bgcolor="#27AC00" style="background-color:#27AC00; height:8px; font-size:0; line-height:0;">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ================= CABEÇALHO ================= -->
+  <!-- linha 1: logo do Governo à esquerda, edição e data à direita -->
+  <tr>
+    <td class="pad" style="padding:24px 40px 0 40px;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="85" valign="middle" style="width:85px;">
+            <img src="https://raw.githubusercontent.com/alicerps1254-beep/imagens-newsletter/main/logogovrj.png"
+                 width="85" height="35" alt="Governo do Estado do Rio de Janeiro - DETRAN.RJ"
+                 style="display:block; width:85px; height:35px; border:0; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#55616B;" />
+          </td>
+          <td align="right" valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:1.5; letter-spacing:1px; text-transform:uppercase;">
+            <span style="font-weight:bold; color:#29812E;">Edição [[Nº]]</span><br />
+            <span style="color:#55616B;">[[DD de mês de AAAA]]</span>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <!-- linha 2: marca DETRAN.RJ Notícias (fixa) -->
+  <tr>
+    <td class="pad" align="center" style="padding:32px 40px 0 40px;">
+      <img class="fluid" src="https://raw.githubusercontent.com/alicerps1254-beep/imagens-newsletter/main/detrannoticias.png"
+           width="420" alt="DETRAN.RJ Notícias"
+           style="display:block; width:420px; max-width:100%; height:auto; border:0; margin:0 auto; font-family:Arial, Helvetica, sans-serif; font-size:28px; font-weight:bold; color:#035C98;" />
+    </td>
+  </tr>
+  <!-- linha 3: descrição do boletim (fixa) -->
+  <tr>
+    <td class="pad" align="center" style="padding:12px 40px 0 40px; font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:1.5; color:#55616B;">
+      Boletim periódico dos normativos que impactam o serviço da autarquia
+    </td>
+  </tr>
+
+  <!-- ================= SUMÁRIO (NESTA EDIÇÃO) ================= -->
+  <tr>
+    <td class="pad" style="padding:32px 40px 0 40px;">
+      <table role="presentation" class="toc" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#F4F7FA" style="background-color:#F4F7FA; border-radius:8px;">
+        <tr>
+          <td class="boxpad" style="padding:24px 24px 12px 24px; font-family:Arial, Helvetica, sans-serif;">
+            <p style="margin:0 0 8px 0; font-size:12px; font-weight:bold; letter-spacing:1.5px; text-transform:uppercase; color:#29812E;">Nesta edição</p>
+            <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+              <!-- INÍCIO ITEM 01 (primeiro item: sem linha divisória em cima) -->
+              <tr>
+                <td width="36" valign="top" style="width:36px; padding:12px 0; font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:1.4; font-weight:bold; color:#035C98;">01</td>
+                <td valign="top" style="padding:12px 0; font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:1.4;">
+                  <a href="#materia-1" style="color:#1F2A33; font-weight:bold; text-decoration:none;">[[Título da matéria 1, igual ao da matéria]]</a>
+                </td>
+              </tr>
+              <!-- FIM ITEM 01 -->
+              <!-- INÍCIO ITEM 02 (copie este para criar novos itens) -->
+              <tr>
+                <td width="36" valign="top" style="width:36px; padding:12px 0; border-top:1px solid #DCE4EB; font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:1.4; font-weight:bold; color:#035C98;">02</td>
+                <td valign="top" style="padding:12px 0; border-top:1px solid #DCE4EB; font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:1.4;">
+                  <a href="#materia-2" style="color:#1F2A33; font-weight:bold; text-decoration:none;">[[Título da matéria 2, igual ao da matéria]]</a>
+                </td>
+              </tr>
+              <!-- FIM ITEM 02 -->
+              <!-- [OPCIONAL] INÍCIO ITEM DETRAN INDICA (apague se a edição não tiver a seção; deixe sempre por último) -->
+              <tr>
+                <td width="36" valign="top" style="width:36px; padding:12px 0; border-top:1px solid #DCE4EB; font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:1.4; font-weight:bold; color:#035C98;">03</td>
+                <td valign="top" style="padding:12px 0; border-top:1px solid #DCE4EB; font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:1.4;">
+                  <a href="#detran-indica" style="color:#1F2A33; font-weight:bold; text-decoration:none;">[[Título do Detran indica, igual ao do bloco]]</a>
+                </td>
+              </tr>
+              <!-- [OPCIONAL] FIM ITEM DETRAN INDICA -->
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
+  <!-- ================= INÍCIO MATÉRIA 1 (completa, com faixa de números) ================= -->
+  <!-- marcador azul/verde + âncora do sumário -->
+  <tr>
+    <td class="pad" style="padding:56px 40px 0 40px;">
+      <a name="materia-1" id="materia-1"></a>
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="24" height="4" bgcolor="#035C98" style="background-color:#035C98; width:24px; height:4px; font-size:0; line-height:0;">&nbsp;</td>
+          <td width="24" height="4" bgcolor="#27AC00" style="background-color:#27AC00; width:24px; height:4px; font-size:0; line-height:0;">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <!-- etiquetas -->
+  <tr>
+    <td class="pad" style="padding:16px 40px 0 40px; font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:1.4; font-weight:bold; letter-spacing:1.5px; text-transform:uppercase; color:#29812E;">
+      Detran informa
+    </td>
+  </tr>
+  <tr>
+    <td class="pad" style="padding:4px 40px 0 40px; font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:1.4; font-weight:bold; letter-spacing:0.5px; text-transform:uppercase; color:#55616B;">
+      [[Normativo externo ou interno]] &#183; <span style="white-space:nowrap;">[[Norma nº 0.000/AAAA]]</span>
+    </td>
+  </tr>
+  <!-- título e linha fina -->
+  <tr>
+    <td class="pad h1" style="padding:16px 40px 0 40px; font-family:Arial, Helvetica, sans-serif; font-size:24px; font-weight:bold; line-height:1.25; color:#035C98;">
+      [[Título da matéria: até 10 palavras, com o efeito principal da norma]]
+    </td>
+  </tr>
+  <tr>
+    <td class="pad" style="padding:12px 40px 0 40px; font-family:Arial, Helvetica, sans-serif; font-size:16px; line-height:1.5; color:#55616B;">
+      [[Linha fina: 1 a 2 frases dizendo o que a norma altera, revoga ou cria.]]
+    </td>
+  </tr>
+  <!-- [OPCIONAL] INÍCIO FAIXA DE NÚMEROS -->
+  <tr>
+    <td class="pad" style="padding:24px 40px 0 40px;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <!-- INÍCIO NÚMERO 1 -->
+          <td width="50%" valign="top" style="width:50%; padding:2px 12px 2px 16px; border-left:3px solid #27AC00; font-family:Arial, Helvetica, sans-serif;">
+            <p class="num" style="margin:0; font-size:36px; line-height:1; font-weight:bold; color:#035C98;">[[00]] <span style="font-size:16px; font-weight:bold;">[[unidade]]</span></p>
+            <p style="margin:8px 0 0 0; font-size:14px; line-height:1.4; color:#55616B;">[[legenda: até 6 palavras]]</p>
+          </td>
+          <!-- FIM NÚMERO 1 -->
+          <!-- INÍCIO NÚMERO 2 -->
+          <td width="50%" valign="top" style="width:50%; padding:2px 0 2px 16px; border-left:3px solid #27AC00; font-family:Arial, Helvetica, sans-serif;">
+            <p class="num" style="margin:0; font-size:36px; line-height:1; font-weight:bold; color:#035C98;">[[00]] <span style="font-size:16px; font-weight:bold;">[[unidade]]</span></p>
+            <p style="margin:8px 0 0 0; font-size:14px; line-height:1.4; color:#55616B;">[[legenda: até 6 palavras]]</p>
+          </td>
+          <!-- FIM NÚMERO 2 -->
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <!-- [OPCIONAL] FIM FAIXA DE NÚMEROS -->
+  <!-- corpo -->
+  <tr>
+    <td class="pad" style="padding:24px 40px 0 40px; font-family:Arial, Helvetica, sans-serif; font-size:16px; line-height:1.6; color:#1F2A33;">
+      [[Corpo: 3 a 6 frases. Data de publicação, o que a norma determina, prazos e o que ela revoga.]]
+    </td>
+  </tr>
+  <!-- caixa verde: usuário -->
+  <tr>
+    <td class="pad" style="padding:32px 40px 0 40px;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#EEF7EA" style="background-color:#EEF7EA;">
+        <tr>
+          <td class="boxpad" style="padding:20px 24px; border-left:4px solid #27AC00; font-family:Arial, Helvetica, sans-serif;">
+            <p style="margin:0 0 8px 0; font-size:12px; font-weight:bold; letter-spacing:1.2px; text-transform:uppercase; color:#246F28;">O que muda para o usuário?</p>
+            <p style="margin:0; font-size:15px; line-height:1.6; color:#1F2A33;">[[2 a 4 frases sobre o efeito da norma para o cidadão.]]</p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <!-- caixa azul: servidor -->
+  <tr>
+    <td class="pad" style="padding:12px 40px 0 40px;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#EAF3FA" style="background-color:#EAF3FA;">
+        <tr>
+          <td class="boxpad" style="padding:20px 24px; border-left:4px solid #035C98; font-family:Arial, Helvetica, sans-serif;">
+            <p style="margin:0 0 8px 0; font-size:12px; font-weight:bold; letter-spacing:1.2px; text-transform:uppercase; color:#035C98;">O que muda para o servidor?</p>
+            <p style="margin:0; font-size:15px; line-height:1.6; color:#1F2A33;">[[2 a 4 frases sobre o que muda na rotina das unidades: atendimento, fiscalização, vistoria, prazos.]]</p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <!-- saiba mais -->
+  <tr>
+    <td class="pad" style="padding:16px 40px 0 40px;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" style="border:1px solid #D6E0E8; border-radius:6px;">
+        <tr>
+          <td style="padding:14px 16px; font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:1.5; color:#1F2A33; word-break:break-word;">
+            <span style="font-weight:bold;">Saiba mais em:</span>
+            <a href="[[LINK DA NORMA, começando com https://]]" target="_blank" rel="noopener"
+               style="color:#035C98; text-decoration:underline; font-weight:bold;">[[Norma nº 0.000/AAAA, no Diário Oficial de DD de mês de AAAA]]</a>&nbsp;<span style="color:#035C98; font-weight:bold;">&#8599;</span>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <!-- ================= FIM MATÉRIA 1 ================= -->
+  <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+
+  <!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
+  <!-- ================= INÍCIO MATÉRIA 2 (simples, sem faixa de números) ================= -->
+  <tr>
+    <td class="pad" style="padding:56px 40px 0 40px;">
+      <a name="materia-2" id="materia-2"></a>
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="24" height="4" bgcolor="#035C98" style="background-color:#035C98; width:24px; height:4px; font-size:0; line-height:0;">&nbsp;</td>
+          <td width="24" height="4" bgcolor="#27AC00" style="background-color:#27AC00; width:24px; height:4px; font-size:0; line-height:0;">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td class="pad" style="padding:16px 40px 0 40px; font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:1.4; font-weight:bold; letter-spacing:1.5px; text-transform:uppercase; color:#29812E;">
+      Detran informa
+    </td>
+  </tr>
+  <tr>
+    <td class="pad" style="padding:4px 40px 0 40px; font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:1.4; font-weight:bold; letter-spacing:0.5px; text-transform:uppercase; color:#55616B;">
+      [[Normativo externo ou interno]] &#183; <span style="white-space:nowrap;">[[Norma nº 0.000/AAAA]]</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="pad h1" style="padding:16px 40px 0 40px; font-family:Arial, Helvetica, sans-serif; font-size:24px; font-weight:bold; line-height:1.25; color:#035C98;">
+      [[Título da matéria: até 10 palavras, com o efeito principal da norma]]
+    </td>
+  </tr>
+  <tr>
+    <td class="pad" style="padding:12px 40px 0 40px; font-family:Arial, Helvetica, sans-serif; font-size:16px; line-height:1.5; color:#55616B;">
+      [[Linha fina: 1 a 2 frases dizendo o que a norma altera, revoga ou cria.]]
+    </td>
+  </tr>
+  <!-- corpo em dois parágrafos: cada <p> é um parágrafo; o último fica sem margem embaixo -->
+  <tr>
+    <td class="pad" style="padding:24px 40px 0 40px; font-family:Arial, Helvetica, sans-serif; font-size:16px; line-height:1.6; color:#1F2A33;">
+      <p style="margin:0 0 16px 0;">[[Primeiro parágrafo do corpo.]]</p>
+      <p style="margin:0;">[[Segundo parágrafo do corpo.]]</p>
+    </td>
+  </tr>
+  <tr>
+    <td class="pad" style="padding:32px 40px 0 40px;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#EEF7EA" style="background-color:#EEF7EA;">
+        <tr>
+          <td class="boxpad" style="padding:20px 24px; border-left:4px solid #27AC00; font-family:Arial, Helvetica, sans-serif;">
+            <p style="margin:0 0 8px 0; font-size:12px; font-weight:bold; letter-spacing:1.2px; text-transform:uppercase; color:#246F28;">O que muda para o usuário?</p>
+            <p style="margin:0; font-size:15px; line-height:1.6; color:#1F2A33;">[[2 a 4 frases sobre o efeito da norma para o cidadão.]]</p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td class="pad" style="padding:12px 40px 0 40px;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#EAF3FA" style="background-color:#EAF3FA;">
+        <tr>
+          <td class="boxpad" style="padding:20px 24px; border-left:4px solid #035C98; font-family:Arial, Helvetica, sans-serif;">
+            <p style="margin:0 0 8px 0; font-size:12px; font-weight:bold; letter-spacing:1.2px; text-transform:uppercase; color:#035C98;">O que muda para o servidor?</p>
+            <p style="margin:0; font-size:15px; line-height:1.6; color:#1F2A33;">[[2 a 4 frases sobre o que muda na rotina das unidades: atendimento, fiscalização, vistoria, prazos.]]</p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td class="pad" style="padding:16px 40px 0 40px;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" style="border:1px solid #D6E0E8; border-radius:6px;">
+        <tr>
+          <td style="padding:14px 16px; font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:1.5; color:#1F2A33; word-break:break-word;">
+            <span style="font-weight:bold;">Saiba mais em:</span>
+            <a href="[[LINK DA NORMA, começando com https://]]" target="_blank" rel="noopener"
+               style="color:#035C98; text-decoration:underline; font-weight:bold;">[[Norma nº 0.000/AAAA, no Diário Oficial de DD de mês de AAAA]]</a>&nbsp;<span style="color:#035C98; font-weight:bold;">&#8599;</span>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <!-- ================= FIM MATÉRIA 2 ================= -->
+  <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+
+  <!-- ================= [OPCIONAL] INÍCIO DETRAN INDICA ================= -->
+  <!-- cole novas matérias logo ACIMA desta linha -->
+  <tr>
+    <td class="pad" style="padding:56px 40px 0 40px;">
+      <a name="detran-indica" id="detran-indica"></a>
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="24" height="4" bgcolor="#035C98" style="background-color:#035C98; width:24px; height:4px; font-size:0; line-height:0;">&nbsp;</td>
+          <td width="24" height="4" bgcolor="#27AC00" style="background-color:#27AC00; width:24px; height:4px; font-size:0; line-height:0;">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td class="pad" style="padding:16px 40px 0 40px; font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:1.4; font-weight:bold; letter-spacing:1.5px; text-transform:uppercase; color:#29812E;">
+      Detran indica
+    </td>
+  </tr>
+  <tr>
+    <td class="pad" style="padding:16px 40px 0 40px;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#F4F7FA" style="background-color:#F4F7FA; border-radius:8px;">
+        <tr>
+          <td class="boxpad" style="padding:24px; font-family:Arial, Helvetica, sans-serif;">
+            <p style="margin:0 0 8px 0; font-size:20px; line-height:1.25; font-weight:bold; color:#035C98;">[[Título curto do destaque: curso, evento, campanha]]</p>
+            <p style="margin:0; font-size:16px; line-height:1.6; color:#1F2A33;">[[1 a 3 frases. Use <strong>negrito</strong> só no termo principal.]]</p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <!-- ================= [OPCIONAL] FIM DETRAN INDICA ================= -->
+
+  <!-- ================= EXPEDIENTE (fixo) ================= -->
+  <tr>
+    <td class="pad" style="padding:56px 40px 0 40px;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr><td height="1" bgcolor="#DCE4EB" style="background-color:#DCE4EB; height:1px; font-size:0; line-height:0;">&nbsp;</td></tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td class="pad" style="padding:32px 40px 32px 40px; font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:1.6; color:#55616B;">
+      <strong style="color:#035C98;">DETRAN.RJ NOTÍCIAS</strong> é fruto de uma colaboração entre a Assessoria de Gestão e Modernização (AGEM), a Divisão de Formação e Qualificação (DFQ) e outros colaboradores dos mais variados setores do DETRAN/RJ.
+    </td>
+  </tr>
+
+  <!-- ================= COLABORAÇÃO (atualize se a equipe mudar) ================= -->
+  <tr>
+    <td class="pad" bgcolor="#D4E9F7" style="background-color:#D4E9F7; padding:32px 40px 32px 40px; font-family:Arial, Helvetica, sans-serif;">
+      <p style="margin:0 0 16px 0; font-size:12px; font-weight:bold; letter-spacing:1.5px; text-transform:uppercase; color:#035C98;">Colaboração</p>
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="stack" width="50%" valign="top" style="width:50%; padding:0 12px 20px 0; font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:1.5; color:#1F2A33;">
+            <span style="font-weight:bold; color:#55616B;">Revisão Técnica</span><br />
+            [[Nome (Setor) ou "A definir"]]
+          </td>
+          <td class="stack" width="50%" valign="top" style="width:50%; padding:0 0 20px 12px; font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:1.5; color:#1F2A33;">
+            <span style="font-weight:bold; color:#55616B;">Edição-executiva</span><br />
+            Igor Carrara Pereira (AGEM)
+          </td>
+        </tr>
+        <tr>
+          <td class="stack" width="50%" valign="top" style="width:50%; padding:0 12px 0 0; font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:1.5; color:#1F2A33;">
+            <span style="font-weight:bold; color:#55616B;">Supervisão Editorial</span><br />
+            Alice Rafael Pantaleão da Silva (AGEM)
+          </td>
+          <td class="stack stackgap" width="50%" valign="top" style="width:50%; padding:0 0 0 12px; font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:1.5; color:#1F2A33;">
+            <span style="font-weight:bold; color:#55616B;">Curadoria e Redação</span><br />
+            Alice Rafael Pantaleão da Silva (AGEM)<br />
+            Vinicius (DFQ)
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ================= RODAPÉ (fixo) ================= -->
+  <tr>
+    <td class="pad" align="center" style="padding:24px 40px 32px 40px; font-family:Arial, Helvetica, sans-serif; font-size:13px; line-height:1.6; color:#55616B;">
+      Você recebe este boletim por ser servidor do <span style="white-space:nowrap;">DETRAN-RJ</span>.<br />
+      Sugestões de pauta e dúvidas:
+      <a href="mailto:agem@detran.rj.gov.br" style="color:#035C98; text-decoration:underline; font-weight:bold;">agem@detran.rj.gov.br</a>
+      /
+      <a href="mailto:dfq@detran.rj.gov.br" style="color:#035C98; text-decoration:underline; font-weight:bold;">dfq@detran.rj.gov.br</a>
+    </td>
+  </tr>
+
+  <!-- ================= FAIXA INFERIOR AZUL/VERDE (fixa) ================= -->
+  <tr>
+    <td style="padding:0;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="50%" height="8" bgcolor="#035C98" style="background-color:#035C98; height:8px; font-size:0; line-height:0;">&nbsp;</td>
+          <td width="50%" height="8" bgcolor="#27AC00" style="background-color:#27AC00; height:8px; font-size:0; line-height:0;">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+
+</td>
+</tr>
+</table>
+</body>
+</html>
