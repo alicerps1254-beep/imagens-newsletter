@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="x-apple-disable-message-reformatting">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
+<title>Detran.RJ Notícias · Edição {{NUMERO_EDICAO}}</title>
+<!--[if mso]>
+<noscript><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
+<style>* { font-family: Arial, Helvetica, sans-serif !important; }</style>
+<![endif]-->
+<!--[if !mso]><!-->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+<!--<![endif]-->
+
+<!--
+  ============================================================================
+  DETRAN.RJ NOTÍCIAS · TEMPLATE BASE (linguagem visual dos infográficos AGEM)
+  ============================================================================
+  PALETA (cada cor tem um papel só)
+    #0A4A93  Azul institucional  bloco-âncora, etiquetas, faixas dos cards, links
+    #062E5E  Azul-noite          títulos e sombra sólida do bloco azul
+    #FDC300  Amarelo destaque    marcadores e sombra da caixa de destaque (nunca texto no branco)
+    #35A63D  Verde               faixa superior/inferior e card do usuário (texto verde: #1F7A2B)
+    #F3F6FA  Névoa               fundo dos cards e do rodapé
+    #C9D7EA  Linha tonal         sombra dos cards claros e divisórias
+    #33404F  Texto corrido       #5B6B80 para texto de apoio
+  TIPOGRAFIA: Montserrat (fallback Arial). Tamanhos: 11 etiqueta / 14 apoio / 15 corpo / 22 título.
+  ESPAÇAMENTO: múltiplos de 8 px. Sombras sólidas deslocadas (8 px no bloco azul, 6 px nos cards).
+
+  PLACEHOLDERS: os mesmos da base anterior. Loops e condicional estão marcados abaixo.
+  ÍCONES: os arquivos icones/usuario.png e icones/servidor.png precisam estar na branch main.
+  ============================================================================
+-->
+
+<style type="text/css">
+  body { margin:0 !important; padding:0 !important; width:100% !important; }
+  table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+  img { border:0; outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; }
+  a[x-apple-data-detectors] { color:inherit !important; text-decoration:none !important; font-size:inherit !important; font-family:inherit !important; font-weight:inherit !important; line-height:inherit !important; }
+  #MessageViewBody a { color:inherit; text-decoration:none; }
+
+  @media only screen and (max-width:620px) {
+    .outer    { padding:0 !important; }
+    .ecw      { width:100% !important; min-width:0 !important; max-width:100% !important; }
+    .pad      { padding-left:20px !important; padding-right:20px !important; }
+    .blk      { padding:24px 20px 16px 20px !important; }
+    .destaque { padding:24px 20px 28px 20px !important; }
+    .cardpad  { padding:16px 16px 20px 16px !important; }
+    .strip    { width:40px !important; }
+    .titulo   { font-size:20px !important; line-height:26px !important; }
+    .col      { display:block !important; width:100% !important; padding:0 0 16px 0 !important; }
+    .logo-dn  { width:260px !important; }
+  }
+</style>
+</head>
+
+<body style="margin:0; padding:0; background-color:#E6ECF4; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;">
+
+<!-- PRÉ-CABEÇALHO: aparece na caixa de entrada, não no corpo -->
+<div style="display:none; max-height:0; max-width:0; overflow:hidden; mso-hide:all; font-size:1px; line-height:1px; color:#E6ECF4; opacity:0;">
+  Boletim periódico dos normativos que impactam o serviço da autarquia · Edição {{NUMERO_EDICAO}}
+  &#8203;&#847;&#8203;&#847;&#8203;&#847;&#8203;&#847;&#8203;&#847;&#8203;&#847;&#8203;&#847;&#8203;&#847;&#8203;&#847;&#8203;&#847;&#8203;&#847;&#8203;&#847;
+</div>
+
+<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#E6ECF4" style="background-color:#E6ECF4;">
+<tr>
+<td class="outer" align="center" style="padding:24px 0;">
+
+<!--[if mso]><table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="600"><tr><td><![endif]-->
+<table role="presentation" class="ecw" align="center" width="600" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" style="width:100%; max-width:600px; background-color:#FFFFFF;">
+
+  <!-- 1. FAIXA SUPERIOR AZUL/VERDE -->
+  <tr>
+    <td style="padding:0; font-size:0; line-height:0;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="50%" height="8" bgcolor="#0A4A93" style="background-color:#0A4A93; height:8px; font-size:8px; line-height:8px; mso-line-height-rule:exactly;">&nbsp;</td>
+          <td width="50%" height="8" bgcolor="#35A63D" style="background-color:#35A63D; height:8px; font-size:8px; line-height:8px; mso-line-height-rule:exactly;">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- 2. CABEÇALHO: LOGO GOV RJ + CHIP DE EDIÇÃO + DATA -->
+  <tr>
+    <td class="pad" style="padding:24px 32px 0 32px;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td align="left" valign="middle">
+            <img src="https://github.com/alicerps1254-beep/imagens-newsletter/blob/main/logogovrj.png?raw=true" width="96" alt="Governo do Estado do Rio de Janeiro" style="display:block; width:96px; height:auto; border:0; font-family:Arial, sans-serif; font-size:12px; color:#062E5E;">
+          </td>
+          <td align="right" valign="middle">
+            <table role="presentation" align="right" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td align="right" style="padding:0 0 8px 0;">
+                  <table role="presentation" align="right" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td bgcolor="#0A4A93" style="background-color:#0A4A93; padding:6px 10px; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:11px; font-weight:800; letter-spacing:1.5px; line-height:14px; mso-line-height-rule:exactly; color:#FFFFFF; text-transform:uppercase; white-space:nowrap;">Edição&nbsp;<span style="color:#FDC300;">{{NUMERO_EDICAO}}</span></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td align="right" style="font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:1px; line-height:14px; mso-line-height-rule:exactly; color:#5B6B80; text-transform:uppercase;">{{DATA_PUBLICACAO}}</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- MARCA DO BOLETIM + LINHA FINA -->
+  <tr>
+    <td class="pad" align="left" style="padding:32px 32px 0 32px;">
+      <img class="logo-dn" src="https://github.com/alicerps1254-beep/imagens-newsletter/blob/main/detrannoticias.png?raw=true" width="320" alt="DETRAN.RJ NOTÍCIAS" style="display:block; width:320px; max-width:100%; height:auto; border:0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:24px; font-weight:800; color:#0A4A93;">
+    </td>
+  </tr>
+  <tr>
+    <td class="pad" style="padding:12px 32px 0 32px; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:14px; font-weight:500; line-height:21px; mso-line-height-rule:exactly; color:#5B6B80;">
+      Boletim periódico dos normativos que impactam o serviço da autarquia
+    </td>
+  </tr>
+
+  <!-- 3. NESTA EDIÇÃO (ÍNDICE) · BLOCO-ÂNCORA AZUL COM SOMBRA AZUL-NOITE -->
+  <tr>
+    <td class="pad" style="padding:32px 32px 0 32px;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="blk" valign="top" bgcolor="#0A4A93" style="background-color:#0A4A93; padding:28px 28px 16px 28px;">
+
+            <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td align="left" valign="middle">
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td bgcolor="#FDC300" style="background-color:#FDC300; border-radius:999px; padding:6px 14px; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:11px; font-weight:800; letter-spacing:1.5px; line-height:14px; mso-line-height-rule:exactly; color:#062E5E; text-transform:uppercase; white-space:nowrap;">&#8594;&nbsp; Em uma leitura</td>
+                    </tr>
+                  </table>
+                </td>
+                <td align="right" valign="middle" aria-hidden="true" style="font-family:Arial, Helvetica, sans-serif; font-size:16px; line-height:16px; mso-line-height-rule:exactly; letter-spacing:5px; color:#2E6DB8;">&#9658;&#9658;<span style="color:#35A63D;">&#9658;</span></td>
+              </tr>
+              <tr>
+                <td colspan="2" style="padding:16px 0 16px 0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:22px; font-weight:800; line-height:28px; mso-line-height-rule:exactly; letter-spacing:-0.2px; color:#FFFFFF;">Nesta edição</td>
+              </tr>
+            </table>
+
+            <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+              <!-- INÍCIO DO LOOP DO ÍNDICE: repetir esta linha <tr> inteira uma vez para cada notícia do formulário -->
+              <tr>
+                <td width="22" valign="top" style="width:22px; border-top:1px solid #2D63A6; padding:12px 0; font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height:21px; mso-line-height-rule:exactly; color:#FDC300;">&#9658;</td>
+                <td valign="top" style="border-top:1px solid #2D63A6; padding:12px 0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:15px; font-weight:700; line-height:21px; mso-line-height-rule:exactly; color:#FFFFFF;">{{TITULO_NOTICIA_INDICE}}</td>
+              </tr>
+              <!-- FIM DO LOOP DO ÍNDICE -->
+            </table>
+
+          </td>
+          <!-- sombra sólida (direita) -->
+          <td width="8" valign="top" bgcolor="#062E5E" style="width:8px; background-color:#062E5E; font-size:0; line-height:0;">
+            <table role="presentation" width="8" border="0" cellpadding="0" cellspacing="0"><tr><td width="8" height="8" bgcolor="#FFFFFF" style="width:8px; height:8px; background-color:#FFFFFF; font-size:8px; line-height:8px; mso-line-height-rule:exactly;">&nbsp;</td></tr></table>
+          </td>
+        </tr>
+        <!-- sombra sólida (base) -->
+        <tr>
+          <td style="padding:0; font-size:0; line-height:0;">
+            <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0"><tr>
+              <td width="8" height="8" bgcolor="#FFFFFF" style="width:8px; height:8px; background-color:#FFFFFF; font-size:8px; line-height:8px; mso-line-height-rule:exactly;">&nbsp;</td>
+              <td height="8" bgcolor="#062E5E" style="height:8px; background-color:#062E5E; font-size:8px; line-height:8px; mso-line-height-rule:exactly;">&nbsp;</td>
+            </tr></table>
+          </td>
+          <td width="8" height="8" bgcolor="#062E5E" style="width:8px; height:8px; background-color:#062E5E; font-size:8px; line-height:8px; mso-line-height-rule:exactly;">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- 4. INÍCIO DO COMPONENTE DE NOTÍCIA (Repetir este bloco inteiro para cada pauta criada) -->
+  <tr>
+    <td class="pad" style="padding:40px 32px 0 32px;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+        <!-- chip DETRAN INFORMA -->
+        <tr>
+          <td align="left">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td bgcolor="#0A4A93" style="background-color:#0A4A93; padding:6px 10px; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:11px; font-weight:800; letter-spacing:1.5px; line-height:14px; mso-line-height-rule:exactly; color:#FFFFFF; text-transform:uppercase; white-space:nowrap;"><span style="color:#FDC300;">Detran</span>&nbsp;Informa</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- etiqueta do normativo -->
+        <tr>
+          <td style="padding:12px 0 0 0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:1px; line-height:16px; mso-line-height-rule:exactly; color:#0A4A93; text-transform:uppercase;">{{ETIQUETA_NORMATIVO}}</td>
+        </tr>
+
+        <!-- título -->
+        <tr>
+          <td style="padding:8px 0 0 0;">
+            <h2 class="titulo" style="margin:0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:22px; font-weight:800; line-height:28px; mso-line-height-rule:exactly; letter-spacing:-0.2px; color:#062E5E;">{{TITULO_NOTICIA}}</h2>
+          </td>
+        </tr>
+
+        <!-- corpo -->
+        <tr>
+          <td style="padding:16px 0 0 0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:15px; font-weight:500; line-height:24px; mso-line-height-rule:exactly; color:#33404F;">
+            {{CORPO_TEXTO_NOTICIA}}
+          </td>
+        </tr>
+
+        <!-- saiba mais -->
+        <tr>
+          <td style="padding:16px 0 0 0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:14px; font-weight:700; line-height:22px; mso-line-height-rule:exactly; color:#062E5E; word-break:break-word;">
+            <span style="font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#0A4A93;">&#9658;</span>&nbsp; Saiba mais em: <a href="{{URL_SAIBA_MAIS}}" target="_blank" rel="noopener" style="color:#0A4A93; text-decoration:underline; font-weight:700;">{{TEXTO_LINK_SAIBA_MAIS}}</a>
+          </td>
+        </tr>
+
+        <!-- CARD: O QUE MUDA PARA O USUÁRIO? (faixa verde, sombra tonal) -->
+        <tr>
+          <td style="padding:24px 0 0 0;">
+            <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td valign="top" style="padding:0;">
+                  <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td class="strip" width="52" valign="top" align="center" bgcolor="#35A63D" style="width:52px; background-color:#35A63D; padding:20px 0 0 0;">
+                        <img src="https://github.com/alicerps1254-beep/imagens-newsletter/blob/main/icones/usuario.png?raw=true" width="24" height="24" alt="" style="display:block; width:24px; height:24px; border:0;">
+                      </td>
+                      <td class="cardpad" valign="top" bgcolor="#F3F6FA" style="background-color:#F3F6FA; padding:20px 24px 24px 24px;">
+                        <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tr><td style="font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:11px; font-weight:800; letter-spacing:1.5px; line-height:14px; mso-line-height-rule:exactly; color:#1F7A2B; text-transform:uppercase;">Usuário</td></tr>
+                          <tr><td style="padding:4px 0 0 0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:15px; font-weight:800; line-height:22px; mso-line-height-rule:exactly; color:#062E5E;">O que muda para o usuário?</td></tr>
+                          <tr><td style="padding:8px 0 0 0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:14px; font-weight:500; line-height:22px; mso-line-height-rule:exactly; color:#33404F;">{{TEXTO_MUDANCA_USUARIO}}</td></tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td width="6" valign="top" bgcolor="#C9D7EA" style="width:6px; background-color:#C9D7EA; font-size:0; line-height:0;">
+                  <table role="presentation" width="6" border="0" cellpadding="0" cellspacing="0"><tr><td width="6" height="6" bgcolor="#FFFFFF" style="width:6px; height:6px; background-color:#FFFFFF; font-size:6px; line-height:6px; mso-line-height-rule:exactly;">&nbsp;</td></tr></table>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:0; font-size:0; line-height:0;">
+                  <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0"><tr>
+                    <td width="6" height="6" bgcolor="#FFFFFF" style="width:6px; height:6px; background-color:#FFFFFF; font-size:6px; line-height:6px; mso-line-height-rule:exactly;">&nbsp;</td>
+                    <td height="6" bgcolor="#C9D7EA" style="height:6px; background-color:#C9D7EA; font-size:6px; line-height:6px; mso-line-height-rule:exactly;">&nbsp;</td>
+                  </tr></table>
+                </td>
+                <td width="6" height="6" bgcolor="#C9D7EA" style="width:6px; height:6px; background-color:#C9D7EA; font-size:6px; line-height:6px; mso-line-height-rule:exactly;">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- CARD: O QUE O SERVIDOR PRECISA SABER? (faixa azul, sombra tonal) -->
+        <tr>
+          <td style="padding:16px 0 0 0;">
+            <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td valign="top" style="padding:0;">
+                  <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td class="strip" width="52" valign="top" align="center" bgcolor="#0A4A93" style="width:52px; background-color:#0A4A93; padding:20px 0 0 0;">
+                        <img src="https://github.com/alicerps1254-beep/imagens-newsletter/blob/main/icones/servidor.png?raw=true" width="24" height="24" alt="" style="display:block; width:24px; height:24px; border:0;">
+                      </td>
+                      <td class="cardpad" valign="top" bgcolor="#F3F6FA" style="background-color:#F3F6FA; padding:20px 24px 24px 24px;">
+                        <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tr><td style="font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:11px; font-weight:800; letter-spacing:1.5px; line-height:14px; mso-line-height-rule:exactly; color:#0A4A93; text-transform:uppercase;">Servidor</td></tr>
+                          <tr><td style="padding:4px 0 0 0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:15px; font-weight:800; line-height:22px; mso-line-height-rule:exactly; color:#062E5E;">O que o servidor precisa saber?</td></tr>
+                          <tr><td style="padding:8px 0 0 0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:14px; font-weight:500; line-height:22px; mso-line-height-rule:exactly; color:#33404F;">{{TEXTO_MUDANCA_SERVIDOR}}</td></tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td width="6" valign="top" bgcolor="#C9D7EA" style="width:6px; background-color:#C9D7EA; font-size:0; line-height:0;">
+                  <table role="presentation" width="6" border="0" cellpadding="0" cellspacing="0"><tr><td width="6" height="6" bgcolor="#FFFFFF" style="width:6px; height:6px; background-color:#FFFFFF; font-size:6px; line-height:6px; mso-line-height-rule:exactly;">&nbsp;</td></tr></table>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:0; font-size:0; line-height:0;">
+                  <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0"><tr>
+                    <td width="6" height="6" bgcolor="#FFFFFF" style="width:6px; height:6px; background-color:#FFFFFF; font-size:6px; line-height:6px; mso-line-height-rule:exactly;">&nbsp;</td>
+                    <td height="6" bgcolor="#C9D7EA" style="height:6px; background-color:#C9D7EA; font-size:6px; line-height:6px; mso-line-height-rule:exactly;">&nbsp;</td>
+                  </tr></table>
+                </td>
+                <td width="6" height="6" bgcolor="#C9D7EA" style="width:6px; height:6px; background-color:#C9D7EA; font-size:6px; line-height:6px; mso-line-height-rule:exactly;">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+
+  <!-- DIVISÓRIA TONAL ENTRE NOTÍCIAS -->
+  <tr>
+    <td class="pad" style="padding:40px 32px 0 32px; font-size:0; line-height:0;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr><td height="1" bgcolor="#C9D7EA" style="height:1px; background-color:#C9D7EA; font-size:1px; line-height:1px; mso-line-height-rule:exactly;">&nbsp;</td></tr>
+      </table>
+    </td>
+  </tr>
+  <!-- FIM DO COMPONENTE DE NOTÍCIA -->
+
+  <!-- 5. INÍCIO DO BLOCO CONDICIONAL: DETRAN INDICA (Condição: Renderizar apenas se o form tiver indicação) -->
+  <!-- Caixa de destaque: azul com sombra sólida amarela. Uma por edição. -->
+  <tr>
+    <td class="pad" style="padding:40px 32px 0 32px;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="destaque" valign="top" bgcolor="#0A4A93" style="background-color:#0A4A93; padding:28px 28px 32px 28px;">
+            <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr><td style="font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:11px; font-weight:800; letter-spacing:1.5px; line-height:14px; mso-line-height-rule:exactly; color:#FDC300; text-transform:uppercase;"><span style="font-family:Arial, Helvetica, sans-serif;">&#9658;</span>&nbsp; Detran indica</td></tr>
+              <tr><td class="titulo" style="padding:12px 0 0 0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:22px; font-weight:800; line-height:28px; mso-line-height-rule:exactly; letter-spacing:-0.2px; color:#FFFFFF;">{{TITULO_DETRAN_INDICA}}</td></tr>
+              <tr><td style="padding:12px 0 0 0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:15px; font-weight:500; line-height:24px; mso-line-height-rule:exactly; color:#E3ECF7;">{{TEXTO_DETRAN_INDICA}}</td></tr>
+            </table>
+          </td>
+          <td width="8" valign="top" bgcolor="#FDC300" style="width:8px; background-color:#FDC300; font-size:0; line-height:0;">
+            <table role="presentation" width="8" border="0" cellpadding="0" cellspacing="0"><tr><td width="8" height="8" bgcolor="#FFFFFF" style="width:8px; height:8px; background-color:#FFFFFF; font-size:8px; line-height:8px; mso-line-height-rule:exactly;">&nbsp;</td></tr></table>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:0; font-size:0; line-height:0;">
+            <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0"><tr>
+              <td width="8" height="8" bgcolor="#FFFFFF" style="width:8px; height:8px; background-color:#FFFFFF; font-size:8px; line-height:8px; mso-line-height-rule:exactly;">&nbsp;</td>
+              <td height="8" bgcolor="#FDC300" style="height:8px; background-color:#FDC300; font-size:8px; line-height:8px; mso-line-height-rule:exactly;">&nbsp;</td>
+            </tr></table>
+          </td>
+          <td width="8" height="8" bgcolor="#FDC300" style="width:8px; height:8px; background-color:#FDC300; font-size:8px; line-height:8px; mso-line-height-rule:exactly;">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <!-- FIM DO BLOCO DETRAN INDICA -->
+
+  <!-- respiro antes do rodapé -->
+  <tr><td height="48" style="height:48px; font-size:48px; line-height:48px; mso-line-height-rule:exactly;">&nbsp;</td></tr>
+
+  <!-- 6 + 8. RODAPÉ EM NÉVOA: TEXTO INSTITUCIONAL, COLABORAÇÃO E CONTATO -->
+  <tr>
+    <td class="pad" bgcolor="#F3F6FA" style="background-color:#F3F6FA; padding:40px 32px 40px 32px;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+        <tr>
+          <td style="font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:14px; font-weight:500; line-height:22px; mso-line-height-rule:exactly; color:#33404F;">
+            <strong style="font-weight:800; color:#062E5E;">DETRAN.RJ NOTÍCIAS</strong> é fruto de uma colaboração entre a Assessoria de Gestão e Modernização (AGEM), a Divisão de Formação e Qualificação (DFQ) e outros colaboradores dos mais variados setores do DETRAN/RJ.
+          </td>
+        </tr>
+
+        <!-- chip COLABORAÇÃO -->
+        <tr>
+          <td align="left" style="padding:32px 0 0 0;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td bgcolor="#0A4A93" style="background-color:#0A4A93; padding:6px 10px; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:11px; font-weight:800; letter-spacing:1.5px; line-height:14px; mso-line-height-rule:exactly; color:#FFFFFF; text-transform:uppercase; white-space:nowrap;">Colaboração</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- expediente em grade 2 x 2 (empilha no celular) -->
+        <tr>
+          <td style="padding:20px 0 0 0;">
+            <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td class="col" width="50%" valign="top" style="width:50%; padding:0 16px 20px 0;">
+                  <p style="margin:0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:11px; font-weight:800; letter-spacing:1px; line-height:16px; color:#0A4A93; text-transform:uppercase;">Curadoria e Redação</p>
+                  <p style="margin:4px 0 0 0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:14px; font-weight:500; line-height:21px; color:#062E5E;">{{NOMES_REDACAO}}</p>
+                </td>
+                <td class="col" width="50%" valign="top" style="width:50%; padding:0 0 20px 0;">
+                  <p style="margin:0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:11px; font-weight:800; letter-spacing:1px; line-height:16px; color:#0A4A93; text-transform:uppercase;">Supervisão Editorial</p>
+                  <p style="margin:4px 0 0 0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:14px; font-weight:500; line-height:21px; color:#062E5E;">{{NOMES_SUPERVISAO}}</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="col" width="50%" valign="top" style="width:50%; padding:0 16px 0 0;">
+                  <p style="margin:0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:11px; font-weight:800; letter-spacing:1px; line-height:16px; color:#0A4A93; text-transform:uppercase;">Revisão Técnica</p>
+                  <p style="margin:4px 0 0 0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:14px; font-weight:500; line-height:21px; color:#062E5E;">{{NOMES_REVISAO}}</p>
+                </td>
+                <td class="col" width="50%" valign="top" style="width:50%; padding:0;">
+                  <p style="margin:0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:11px; font-weight:800; letter-spacing:1px; line-height:16px; color:#0A4A93; text-transform:uppercase;">Edição-executiva</p>
+                  <p style="margin:4px 0 0 0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:14px; font-weight:500; line-height:21px; color:#062E5E;">{{NOMES_EDICAO}}</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- linha tonal -->
+        <tr>
+          <td style="padding:32px 0 0 0; font-size:0; line-height:0;">
+            <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr><td height="1" bgcolor="#C9D7EA" style="height:1px; background-color:#C9D7EA; font-size:1px; line-height:1px; mso-line-height-rule:exactly;">&nbsp;</td></tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- motivo do recebimento e contato -->
+        <tr>
+          <td style="padding:24px 0 0 0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:12px; font-weight:500; line-height:20px; mso-line-height-rule:exactly; color:#5B6B80;">
+            Você recebe este boletim por ser servidor do DETRAN-RJ. Sugestões de pauta e dúvidas:<br>
+            <a href="mailto:agem@detran.rj.gov.br" style="color:#0A4A93; font-weight:700; text-decoration:underline;">agem@detran.rj.gov.br</a>&nbsp; · &nbsp;<a href="mailto:dfq.cursos@detran.rj.gov.br" style="color:#0A4A93; font-weight:700; text-decoration:underline;">dfq.cursos@detran.rj.gov.br</a>
+          </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+
+  <!-- 7. FAIXA INFERIOR AZUL/VERDE -->
+  <tr>
+    <td style="padding:0; font-size:0; line-height:0;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="50%" height="8" bgcolor="#0A4A93" style="background-color:#0A4A93; height:8px; font-size:8px; line-height:8px; mso-line-height-rule:exactly;">&nbsp;</td>
+          <td width="50%" height="8" bgcolor="#35A63D" style="background-color:#35A63D; height:8px; font-size:8px; line-height:8px; mso-line-height-rule:exactly;">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+
+</td>
+</tr>
+</table>
+</body>
+</html>
