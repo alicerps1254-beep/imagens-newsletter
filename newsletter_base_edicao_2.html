@@ -25,14 +25,16 @@
     #0A4A93  Azul institucional  bloco-âncora, etiquetas, faixas dos cards, links
     #062E5E  Azul-noite          títulos e sombra sólida do bloco azul
     #FDC300  Amarelo destaque    marcadores e sombra da caixa de destaque (nunca texto no branco)
-    #35A63D  Verde               faixa superior/inferior e card do usuário (texto verde: #1F7A2B)
+    #35A63D  Verde               faixas, card do usuário e sombra do "Você sabia?" (texto verde: #1F7A2B)
+    #EAF6EC  Verde-claro         fundo do bloco "Você sabia?"
     #F3F6FA  Névoa               fundo dos cards e do rodapé
     #C9D7EA  Linha tonal         sombra dos cards claros e divisórias
     #33404F  Texto corrido       #5B6B80 para texto de apoio
   TIPOGRAFIA: Montserrat (fallback Arial). Tamanhos: 11 etiqueta / 14 apoio / 15 corpo / 22 título.
   ESPAÇAMENTO: múltiplos de 8 px. Sombras sólidas deslocadas (8 px no bloco azul, 6 px nos cards).
 
-  PLACEHOLDERS: os mesmos da base anterior. Loops e condicional estão marcados abaixo.
+  PLACEHOLDERS: os mesmos da base anterior, mais {{TITULO_VOCE_SABIA}} e {{TEXTO_VOCE_SABIA}}
+  (bloco condicional "Você sabia?"). Loops e condicionais estão marcados abaixo.
   ÍCONES: os arquivos icones/usuario.png e icones/servidor.png precisam estar na branch main.
   ============================================================================
 -->
@@ -55,6 +57,9 @@
     .titulo   { font-size:20px !important; line-height:26px !important; }
     .col      { display:block !important; width:100% !important; padding:0 0 16px 0 !important; }
     .logo-dn  { width:260px !important; }
+    .tilecol  { width:44px !important; }
+    .tile     { width:44px !important; height:44px !important; font-size:26px !important; line-height:44px !important; }
+    .tilegap  { padding-left:16px !important; }
   }
 </style>
 </head>
@@ -341,6 +346,50 @@
     </td>
   </tr>
   <!-- FIM DO BLOCO DETRAN INDICA -->
+
+  <!-- 5.1 INÍCIO DO BLOCO CONDICIONAL: VOCÊ SABIA? (Condição: Renderizar apenas se o form tiver um "Você sabia?") -->
+  <!-- Caixa de curiosidade: verde-claro com sombra sólida verde. Diferente do Detran Indica (azul com sombra amarela). -->
+  <tr>
+    <td class="pad" style="padding:40px 32px 0 32px;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="destaque" valign="top" bgcolor="#EAF6EC" style="background-color:#EAF6EC; padding:28px 28px 32px 28px;">
+            <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td class="tilecol" width="56" valign="top" style="width:56px;">
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td class="tile" width="56" height="56" align="center" valign="middle" bgcolor="#35A63D" aria-hidden="true" style="width:56px; height:56px; background-color:#35A63D; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:34px; font-weight:800; line-height:56px; mso-line-height-rule:exactly; color:#FFFFFF; text-align:center;">?</td>
+                    </tr>
+                  </table>
+                </td>
+                <td class="tilegap" valign="top" style="padding:0 0 0 20px;">
+                  <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr><td style="font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:11px; font-weight:800; letter-spacing:1.5px; line-height:14px; mso-line-height-rule:exactly; color:#1F7A2B; text-transform:uppercase;"><span style="font-family:Arial, Helvetica, sans-serif;">&#9658;</span>&nbsp; Você sabia?</td></tr>
+                    <tr><td class="titulo" style="padding:12px 0 0 0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:22px; font-weight:800; line-height:28px; mso-line-height-rule:exactly; letter-spacing:-0.2px; color:#062E5E;">{{TITULO_VOCE_SABIA}}</td></tr>
+                    <tr><td style="padding:12px 0 0 0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:15px; font-weight:500; line-height:24px; mso-line-height-rule:exactly; color:#33404F;">{{TEXTO_VOCE_SABIA}}</td></tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td width="8" valign="top" bgcolor="#35A63D" style="width:8px; background-color:#35A63D; font-size:0; line-height:0;">
+            <table role="presentation" width="8" border="0" cellpadding="0" cellspacing="0"><tr><td width="8" height="8" bgcolor="#FFFFFF" style="width:8px; height:8px; background-color:#FFFFFF; font-size:8px; line-height:8px; mso-line-height-rule:exactly;">&nbsp;</td></tr></table>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:0; font-size:0; line-height:0;">
+            <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0"><tr>
+              <td width="8" height="8" bgcolor="#FFFFFF" style="width:8px; height:8px; background-color:#FFFFFF; font-size:8px; line-height:8px; mso-line-height-rule:exactly;">&nbsp;</td>
+              <td height="8" bgcolor="#35A63D" style="height:8px; background-color:#35A63D; font-size:8px; line-height:8px; mso-line-height-rule:exactly;">&nbsp;</td>
+            </tr></table>
+          </td>
+          <td width="8" height="8" bgcolor="#35A63D" style="width:8px; height:8px; background-color:#35A63D; font-size:8px; line-height:8px; mso-line-height-rule:exactly;">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <!-- FIM DO BLOCO VOCÊ SABIA -->
 
   <!-- respiro antes do rodapé -->
   <tr><td height="48" style="height:48px; font-size:48px; line-height:48px; mso-line-height-rule:exactly;">&nbsp;</td></tr>

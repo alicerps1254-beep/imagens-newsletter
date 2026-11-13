@@ -10,8 +10,9 @@
   ============================================================================
   DETRAN.RJ NOTÍCIAS · VERSÃO PDF (A4 retrato)
   ============================================================================
-  Mesmos placeholders, loops e condicional do template de e-mail
-  (newsletter_base_edicao_2.html). A numeração 01, 02, 03... é automática.
+  Mesmos placeholders, loops e condicionais do template de e-mail
+  (newsletter_base_edicao_2.html), inclusive o bloco "Você sabia?".
+  A numeração 01, 02, 03... é automática.
 
   COMO GERAR O PDF
     1. Preencha os placeholders, como na versão de e-mail.
@@ -137,6 +138,15 @@
   .destaque h3 { margin-top:3mm; font-size:17pt; font-weight:800; line-height:1.22; letter-spacing:-.01em; color:#FFFFFF; }
   .destaque .txt { font-size:10pt; line-height:1.55; color:#E3ECF7; padding-top:5.2mm; }
 
+  /* ---------- VOCÊ SABIA? (verde-claro com sombra verde) ---------- */
+  .sabia-wrap { margin-top:11mm; break-inside:avoid; }
+  .sabia { background:#EAF6EC; box-shadow:2.5mm 2.5mm 0 var(--verde); margin-right:2.5mm; padding:6mm 8mm 7mm 7mm;
+           display:grid; grid-template-columns:14mm 1fr; column-gap:6mm; break-inside:avoid; }
+  .sabia .tile { width:14mm; height:14mm; background:var(--verde); color:#FFFFFF; font-size:22pt; font-weight:800; line-height:14mm; text-align:center; }
+  .sabia .rot { display:block; color:var(--verde-txt); }
+  .sabia h3 { margin-top:2.4mm; font-size:17pt; font-weight:800; line-height:1.22; letter-spacing:-.01em; color:var(--noite); }
+  .sabia p { margin-top:2.4mm; font-size:10pt; line-height:1.55; color:var(--texto); max-width:140mm; }
+
   /* ---------- RODAPÉ ---------- */
   .rodape { margin-top:12mm; background:var(--nevoa); padding:9mm 0 9mm 0; break-inside:avoid; }
   .sobre { font-size:9pt; line-height:1.55; max-width:150mm; }
@@ -224,6 +234,19 @@
     </div>
   </section>
   <!-- FIM DO BLOCO DETRAN INDICA -->
+
+  <!-- 5.1 INÍCIO DO BLOCO CONDICIONAL: VOCÊ SABIA? (Condição: Renderizar apenas se o form tiver um "Você sabia?") -->
+  <section class="sabia-wrap wrap">
+    <div class="sabia">
+      <div class="tile" aria-hidden="true">?</div>
+      <div>
+        <span class="rot"><span class="tri">&#9658;</span>&nbsp; Você sabia?</span>
+        <h3>{{TITULO_VOCE_SABIA}}</h3>
+        <p>{{TEXTO_VOCE_SABIA}}</p>
+      </div>
+    </div>
+  </section>
+  <!-- FIM DO BLOCO VOCÊ SABIA -->
 
   <!-- RODAPÉ: TEXTO INSTITUCIONAL, COLABORAÇÃO E CONTATO -->
   <footer class="rodape">
