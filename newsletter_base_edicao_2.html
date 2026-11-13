@@ -34,7 +34,8 @@
   ESPAÇAMENTO: múltiplos de 8 px. Sombras sólidas deslocadas (8 px no bloco azul, 6 px nos cards).
 
   PLACEHOLDERS: os mesmos da base anterior, mais {{TITULO_VOCE_SABIA}} e {{TEXTO_VOCE_SABIA}}
-  (bloco condicional "Você sabia?"). Loops e condicionais estão marcados abaixo.
+  (bloco condicional "Você sabia?"), que tem link opcional: {{URL_SAIBA_MAIS_VOCE_SABIA}} e
+  {{TEXTO_LINK_SAIBA_MAIS_VOCE_SABIA}}. Loops e condicionais estão marcados abaixo.
   ÍCONES: os arquivos icones/usuario.png e icones/servidor.png precisam estar na branch main.
   ============================================================================
 -->
@@ -368,6 +369,9 @@
                     <tr><td style="font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:11px; font-weight:800; letter-spacing:1.5px; line-height:14px; mso-line-height-rule:exactly; color:#1F7A2B; text-transform:uppercase;"><span style="font-family:Arial, Helvetica, sans-serif;">&#9658;</span>&nbsp; Você sabia?</td></tr>
                     <tr><td class="titulo" style="padding:12px 0 0 0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:22px; font-weight:800; line-height:28px; mso-line-height-rule:exactly; letter-spacing:-0.2px; color:#062E5E;">{{TITULO_VOCE_SABIA}}</td></tr>
                     <tr><td style="padding:12px 0 0 0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:15px; font-weight:500; line-height:24px; mso-line-height-rule:exactly; color:#33404F;">{{TEXTO_VOCE_SABIA}}</td></tr>
+                    <!-- INÍCIO DO LINK OPCIONAL DO VOCÊ SABIA (Condição: Renderizar apenas se o form tiver link) -->
+                    <tr><td style="padding:12px 0 0 0; font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:14px; font-weight:700; line-height:22px; mso-line-height-rule:exactly; color:#062E5E; word-break:break-word;"><span style="font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#1F7A2B;">&#9658;</span>&nbsp; Saiba mais em: <a href="{{URL_SAIBA_MAIS_VOCE_SABIA}}" target="_blank" rel="noopener" style="color:#0A4A93; text-decoration:underline; font-weight:700;">{{TEXTO_LINK_SAIBA_MAIS_VOCE_SABIA}}</a></td></tr>
+                    <!-- FIM DO LINK OPCIONAL DO VOCÊ SABIA -->
                   </table>
                 </td>
               </tr>

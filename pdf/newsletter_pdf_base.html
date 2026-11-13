@@ -146,6 +146,9 @@
   .sabia .rot { display:block; color:var(--verde-txt); }
   .sabia h3 { margin-top:2.4mm; font-size:17pt; font-weight:800; line-height:1.22; letter-spacing:-.01em; color:var(--noite); }
   .sabia p { margin-top:2.4mm; font-size:10pt; line-height:1.55; color:var(--texto); max-width:140mm; }
+  .sabia .sabia-link { margin-top:3mm; font-size:9pt; font-weight:700; line-height:1.45; color:var(--noite); }
+  .sabia-link .tri { font-size:7pt; color:var(--verde-txt); }
+  .sabia-link a { color:var(--azul); text-decoration:underline; word-break:break-word; }
 
   /* ---------- RODAPÉ ---------- */
   .rodape { margin-top:12mm; background:var(--nevoa); padding:9mm 0 9mm 0; break-inside:avoid; }
@@ -243,6 +246,9 @@
         <span class="rot"><span class="tri">&#9658;</span>&nbsp; Você sabia?</span>
         <h3>{{TITULO_VOCE_SABIA}}</h3>
         <p>{{TEXTO_VOCE_SABIA}}</p>
+        <!-- INÍCIO DO LINK OPCIONAL DO VOCÊ SABIA (Condição: Renderizar apenas se o form tiver link) -->
+        <p class="sabia-link"><span class="tri">&#9658;</span>&nbsp; Saiba mais em: <a href="{{URL_SAIBA_MAIS_VOCE_SABIA}}">{{TEXTO_LINK_SAIBA_MAIS_VOCE_SABIA}}</a></p>
+        <!-- FIM DO LINK OPCIONAL DO VOCÊ SABIA -->
       </div>
     </div>
   </section>
